@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream-color: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --dark-gray-blue: hsl(228, 12%, 48%);
+}
+
+*{
+    /* font-family: 'Fraunces', serif; */
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream-color);
+    display: grid;
+    place-content: center;
+}
+.product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: 1rem;
+}
+img {
+    display: block;
+    max-width: 100%;
+
+}
+.product .product-content {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.product-content span {
+    font-size: 13px;
+    color: var(--dark-gray-blue);
+}
+
+.product-content h2{
+    line-height: 1;
+    font-family: 'Fraunces', serif;
+    margin: 20px 0px ;
+}
+
+.product-content p {
+    color: var(--dark-gray-blue);
+    margin: 30px 0px;
+    line-height: 1.6;
+}
+.product-content .price{
+    display: flex;
+    align-items: center;
+}
+.product-content .price .discount-price {
+    font-weight: 700px;
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    margin-right: 10px;
+}
+
+.product-content .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px ;
+    text-align: center;
+    margin: 20px 0px;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    border: none;
+    color: white;
+}
+
+.product-content .btn::before {
+    content: "";
+    background: url(./images/icon-cart.svg);
+    height: 16px;
+    width: 13px;
+    margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+    .product {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
